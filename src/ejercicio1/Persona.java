@@ -1,7 +1,7 @@
 package ejercicio1;
 import java.time.LocalDate;
 
-public class Persona {
+public class Persona{
 	
 	 private String dni;
 	 private String nombre;
@@ -32,6 +32,25 @@ public class Persona {
        this.telefono = telefono;
        this.email = email;
     }
+	 
+	 
+	 public static boolean exVerificarDNI(String dni) throws ExVerificarDNI {
+
+		    for (int i = 0; i < dni.length(); i++)
+		    {
+		        if ( !(dni.length() == 8 && Character.isDigit(dni.charAt(i))) )
+		        {
+		            throw new ExVerificarDNI();
+		        }
+		    }
+
+		    if (dni.length() != 8) {
+		        throw new ExVerificarDNI();
+		    }
+
+		    return true;
+		}
+	 
 	 
 	private int calcularEdad(LocalDate fechaNacimiento) { 	//método calcularEdad (en años) a partir de la fecha de nacimiento recibida.
 		
@@ -109,6 +128,7 @@ public class Persona {
 			return "Persona [dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", genero="
 					+ genero + ", direccion=" + direccion + ", telefono=" + telefono + ", email=" + email + "]";
 		}
-				
+		
+		
 
 }
