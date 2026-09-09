@@ -1,5 +1,11 @@
 package Ejercicio2;
 
-public class EdificioDeOficinas {
+public class EdificioDeOficinas implements Edificio{
+
+	@Override
+	public double getSuperficieEdificio() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }
