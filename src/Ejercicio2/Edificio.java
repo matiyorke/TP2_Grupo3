@@ -17,4 +17,16 @@ public abstract class Edificio {
     public double getSuperficieEdificio() {
     	return superficie;
     }
+
+    public void setSuperficie(double superficie) {
+    	this.superficie = superficie;
+    }
+
+    public String getNombre() {
+    	return nombre;
+    }
+
+    public void setNombre(String nombre) {
+    	this.nombre = nombre;
+    }
 }
