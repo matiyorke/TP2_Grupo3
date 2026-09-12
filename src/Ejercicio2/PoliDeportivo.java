@@ -1,24 +1,20 @@
 package Ejercicio2;
 
-public class PoliDeportivo implements InstalacionDeportiva, Edificio {
-
-	private double superficie;
-	private String nombre;
+public class PoliDeportivo extends Edificio implements InstalacionDeportiva{
 	
 	public PoliDeportivo() {
 		
 	}
 	
 	public PoliDeportivo(double superficie, String nombre) {
-		super();
-		this.superficie = superficie;
-		this.nombre = nombre;
+		
+		super(superficie, nombre);
+		
 	}
 
 	@Override
-	public double getSuperficieEdificio() {
-		// TODO Auto-generated method stub
-		return 0;
+	public double getSuperficieEdificio() {	
+		return this.superficie;
 	}
 
 	@Override

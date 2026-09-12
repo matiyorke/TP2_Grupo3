@@ -1,11 +1,15 @@
 package Ejercicio2;
 
-public class EdificioDeOficinas implements Edificio {
+public class EdificioDeOficinas extends Edificio {
 
 	private int numeroOficinas;
 	
 	public EdificioDeOficinas() {
 		
+	}
+	
+	public EdificioDeOficinas(double superficie, String nombre) {
+		super(superficie, nombre);
 	}
 	
 	public EdificioDeOficinas(int numeroOficinas) {
@@ -15,7 +19,7 @@ public class EdificioDeOficinas implements Edificio {
 
 	@Override
 	public double getSuperficieEdificio() {
-		return 0;
+		return this.superficie;
 	}
 
 }
